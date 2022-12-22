@@ -33,6 +33,31 @@ body{
     font-size:var(--font-size-sm);
 }
 
+/* Column Styles */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+.row {margin: 0 -5px;}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* "card" effect */
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--light-color);
+  }
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
 /* Search */
 .search-form-container{
     width: 100%;
