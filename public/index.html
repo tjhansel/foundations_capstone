@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>My Board Game Library</title>
+</head>
+<body>
+  <header class="header" id="header"></header>
+    <nav class="navbar container">
+      <a href="./index.html">
+        <h2 class="title">My Board Game Library</h2>
+      </a>
+      <div class="menu" id="menu">
+      </div>
+      <div class="button-list listright">
+        <button class="btn place-items-center" id="theme-toggle-btn">
+          <i class="ri-search-line search-icon"></i>
+        </button>
+      </div>
+    </nav>
+    <div class="search-form-container container" id="search-form-container">
+      <div class="form-container-inner">
+        <form action="" class="form">
+          <input type="text" class="form-input" placeholder="Search for board game">
+          <button class="btn form-btn"type="submit">
+            <i class="ri-search-line"></i>
+          </button>
+        </form>
+        <span class="form-note">Or press ESC to close.</span>
+      </div>
+      <button class="btn form-close-btn place-items-center" id="form-close-btn"></button>
+      <i class="ri-close-circle-line"></i>
+    </div>
+
+   
+
+    <script src="./main.js"></script>
+</body>
+</html>
