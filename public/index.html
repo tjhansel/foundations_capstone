@@ -17,46 +17,49 @@
       <div class="menu" id="menu">
       </div>
       <div class="button-list listright">
-        <button class="btn place-items-center" id="theme-toggle-btn">
-          <i class="ri-search-line search-icon"></i>
+        <button id="add-game-button">
+          <i class="ri-add-box-fill"></i>
         </button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+        
+            <label for="">
+              Search
+            </label>
+            <input id="gameSearch" type="text">
+            <button onclick="doSearch()">Find</button>
+          <div id="resultsDiv"></div>
+          </div>
+        </div>
       </div>
     </nav>
-<!-- Cards -->
+
+    <section class="library" id="gameLibrary">
+      
+  </section>
+<!-- Game Boxes -->
     <div class="row">
       <div class="column">
-        <div class="card" id="addGameCard">
+        <div class="card" id="addGameBox">
           <i class="ri-add-box-fill"></i>
         </div>
       </div>
-      <div class="column">
-        <div class="card" id="gameCard"></div>
+     <div class="column">
+        <div class="card" id="gameBox"></div>
 
       </div>
       <div class="column">
-        <div class="card" id="gameCard"></div>
+        <div class="card" id="gameBox"></div>
       </div>
       <div class="column">
-        <div class="card" id="gameCard"></div>
+        <div class="card" id="gameBox"></div>
       </div>
     </div>
 
-    <!-- <div class="search-form-container container" id="search-form-container">
-      <div class="form-container-inner">
-        <form action="" class="form">
-          <input type="text" class="form-input" placeholder="Search for board game">
-          <button class="btn form-btn"type="submit">
-            <i class="ri-search-line"></i>
-          </button>
-        </form>
-        <span class="form-note">Or press ESC to close.</span>
-      </div>
-      <button class="btn form-close-btn place-items-center" id="form-close-btn"></button>
-      <i class="ri-close-circle-line"></i>
-    </div> -->
-
-   
-
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
+ 
