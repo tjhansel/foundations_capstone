@@ -1,0 +1,92 @@
+[
+{
+    "name":"Everdell",
+    "image":"https://cf.geekdo-images.com/fjE7V5LNq31yVEW_yuqI-Q__imagepage/img/ijYTk6KGtxLRdIvLsGar13ZHs4c=/fit-in/900x600/filters:no_upscale():strip_icc()/pic3918905.png",
+    "thumbnail": "https://cf.geekdo-images.com/fjE7V5LNq31yVEW_yuqI-Q__thumb/img/Cf_mYxR_VvdjTEPXseSurni2JNI=/fit-in/200x150/filters:strip_icc()/pic3918905.png",
+    "minPlayers": 1,
+    "maxPlayers": 4,
+    "playingTime": 80
+},
+{
+    "name": "Flamecraft",
+    "image": "https://cf.geekdo-images.com/EvGtnsBDcfnKiqSiXHothQ__original/img/7yj8nA0ObuZ1w5AYCThEOK6meWA=/0x0/filters:format(jpeg)/pic6605448.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/EvGtnsBDcfnKiqSiXHothQ__thumb/img/bQcyvzYRdMFFvcdQkFVnIRiCPjE=/fit-in/200x150/filters:strip_icc()/pic6605448.jpg",
+    "minPlayers": 1,
+    "maxPlayers": 5,
+    "playingTime": 60
+},
+{
+    "name": "Canopy",
+    "image": "https://cf.geekdo-images.com/-zWPMAXd1IZllCMAP5IeVA__original/img/vk0v34dLBl4utcZV-Kqc3QXVIUo=/0x0/filters:format(jpeg)/pic5090694.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/-zWPMAXd1IZllCMAP5IeVA__thumb/img/qkimPPOS3fMxvXDtXZvPemc-Lvc=/fit-in/200x150/filters:strip_icc()/pic5090694.jpg",
+    "minPlayers": 1,
+    "maxPlayers": 4,
+    "playingTime": 30
+},
+{
+    "name": "Namiji",
+    "image": "https://cf.geekdo-images.com/AW6IWjNVwOOLxVHepkQk1g__original/img/vrWnwd7-67YNTr4XFra222jO3Sk=/0x0/filters:format(jpeg)/pic4629265.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/AW6IWjNVwOOLxVHepkQk1g__thumb/img/pDLMyt8zz2ga13wKW0ayyjVRkOw=/fit-in/200x150/filters:strip_icc()/pic4629265.jpg",
+    "minPlayers": 2,
+    "maxPlayers": 5,
+    "playingTime": 45
+},
+{
+    "name": "Tapestry",
+    "image": "https://cf.geekdo-images.com/7kqDmkUMGxXHr1wNPA7Gvg__original/img/e6rS0PyrVlPpJjCsWPmCaGg9PXc=/0x0/filters:format(jpeg)/pic4884996.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/7kqDmkUMGxXHr1wNPA7Gvg__thumb/img/1najF3Bh3QI7k2c9sJeTXznbvPU=/fit-in/200x150/filters:strip_icc()/pic4884996.jpg",
+    "minPlayers": 1,
+    "maxPlayers": 5,
+    "playingTime": 120
+},
+{
+    "name": "Splendor",
+    "image": "https://cf.geekdo-images.com/rwOMxx4q5yuElIvo-1-OFw__original/img/Y2tUGY2nPTGd_epJYKQXPkQD8AM=/0x0/filters:format(jpeg)/pic1904079.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/rwOMxx4q5yuElIvo-1-OFw__thumb/img/D4hkkHfOgu22PwgJomjplWAveuo=/fit-in/200x150/filters:strip_icc()/pic1904079.jpg",
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "playingTime": 30
+},
+{
+    "name": "Living Forest",
+    "image": "https://cf.geekdo-images.com/fPhdfZX9UTLr4-SVgK0zoQ__original/img/ZPdxDPt1jSRQMNnVgn-qIPhNv0E=/0x0/filters:format(jpeg)/pic5899025.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/fPhdfZX9UTLr4-SVgK0zoQ__thumb/img/v8irnVxaCdK29XPtqEbtlKkLY4c=/fit-in/200x150/filters:strip_icc()/pic5899025.jpg",
+    "minPlayers": 1,
+    "maxPlayers": 4,
+    "playingTime": 40
+},
+{
+    "name": "The Settlers of Catan",
+    "image": "https://cf.geekdo-images.com/5P_kEuV33eTWApSJNS787g__original/img/68E9IOFyz2tXXrSyOoTJgj7l3gc=/0x0/filters:format(jpeg)/pic1126839.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/5P_kEuV33eTWApSJNS787g__thumb/img/_GYvK_nLZ_O0dqETD5Y8aJtARnQ=/fit-in/200x150/filters:strip_icc()/pic1126839.jpg",
+    "minPlayers": 3,
+    "maxPlayers": 6,
+    "playingTime": 75
+},
+{
+    "name": "Sushi Go Party!",
+    "image": "https://cf.geekdo-images.com/2f9uTicUSXkdPp2Yks6zFw__original/img/WQcFmlhYBMIp8f6gNNVhnnue1w4=/0x0/filters:format(jpeg)/pic5885689.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/2f9uTicUSXkdPp2Yks6zFw__thumb/img/_mXR9Tlo0f-i80h6pfhDEOBgvpY=/fit-in/200x150/filters:strip_icc()/pic5885689.jpg",
+    "minPlayers": 2,
+    "maxPlayers": 8,
+    "playingTime": 20
+},
+{
+    "name": "Azul",
+    "image": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__original/img/AkbtYVc6xXJF3c9EUrakklcclKw=/0x0/filters:format(png)/pic6973671.png",
+    "thumbnail": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__thumb/img/ccsXKrdGJw-YSClWwzVUwk5Nh9Y=/fit-in/200x150/filters:strip_icc()/pic6973671.png",
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "playingTime": 45
+},
+{
+    "name": "Wingspan",
+    "image": "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__original/img/cI782Zis9cT66j2MjSHKJGnFPNw=/0x0/filters:format(jpeg)/pic4458123.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__thumb/img/VNToqgS2-pOGU6MuvIkMPKn_y-s=/fit-in/200x150/filters:strip_icc()/pic4458123.jpg",
+    "minPlayers": 1,
+    "maxPlayers": 5,
+    "playingTime": 70
+}
+
+
+]
