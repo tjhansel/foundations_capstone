@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>My Board Game Library</title>
+    <link rel="icon" type="image/x-icon" href="icons/dashboard-fill.png">
 </head>
 <body>
   <header class="header" id="header"></header>
@@ -14,49 +15,30 @@
       <a href="./index.html">
         <h2 class="title">My Board Game Library</h2>
       </a>
-      <div class="menu" id="menu">
-      </div>
-      <div class="button-list listright">
+      <div>
         <button id="add-game-button">
           <i class="ri-add-box-fill"></i>
+          Add Game To Library
         </button>
-        <div id="myModal" class="modal">
+        <div id="searchModal" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
         
             <label for="">
-              Search
             </label>
-            <input id="gameSearch" type="text">
-            <button onclick="doSearch()">Find</button>
+            <input id="gameSearch" type="text" onfocus="this.value=''">
+            <button id="search-button" onclick="doSearch()">Search</button>
           <div id="resultsDiv"></div>
           </div>
         </div>
       </div>
     </nav>
-
+    
     <section class="library" id="gameLibrary">
-      
+      <!-- Game Boxes -->
   </section>
-<!-- Game Boxes -->
-    <div class="row">
-      <div class="column">
-        <div class="card" id="addGameBox">
-          <i class="ri-add-box-fill"></i>
-        </div>
-      </div>
-     <div class="column">
-        <div class="card" id="gameBox"></div>
-
-      </div>
-      <div class="column">
-        <div class="card" id="gameBox"></div>
-      </div>
-      <div class="column">
-        <div class="card" id="gameBox"></div>
-      </div>
-    </div>
-
+  <div id="gameStatsModal">
+  </div>
     
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./main.js"></script>

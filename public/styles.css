@@ -33,10 +33,9 @@ html{
 body{
     font-family: var(--font-family);
     font-size:var(--font-size-sm);
-    color: var(--light-color-alt);
+    color: var(--secondary-background-color);
     background-color: var(--primary-background-color);
-    letter-spacing: 1px;
-    transition: background-color .25s, color .25s;
+    letter-spacing: .5px;
 }
 
 a{
@@ -54,31 +53,9 @@ ul{
     list-style: none;
 }
 
-/* input{
-    font:inherit;
-    color:inherit;
-    border: 1rem;
-    background-color: transparent;
-    outline: none;
-} */
-
 i{
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-xl);
 }
-
-/* Reuseable classes */
-/* .container{
-    max-width: 160rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
-.place-items-center{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-} */
-
 
 /* Header */
 .header{
@@ -93,11 +70,13 @@ i{
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-block: 1.5rem;
+    justify-content:space-evenly;
+    padding-block: 2.5rem;
+    margin: 5px;
 }
+
 .title{
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-xl);
     color: var(--light-color);
 
 }
@@ -105,20 +84,19 @@ i{
 /* Column Styles */
 .column {
     float: left;
-    width: 25%;
-    padding: 0 10px;
-  }
-.row {margin: 0 -5px;}
-.row:after {
-    content: "";
     display: table;
-    clear: both;
+    width: auto;
+    padding: 0 10px;
+    margin: 10px;
+    
   }
   .card {
     box-shadow: 0 4px 8px 0 rgba(247, 245, 245, 0.612); /* "card" effect */
     padding: 1.5rem;
     text-align: center;
     background-color: var(--light-color);
+    display: table-cell;
+    border: #131417;
   }
 @media screen and (max-width: 60px) { 
     .column {
@@ -130,59 +108,10 @@ i{
 
 
   /* Search */
-/* .search-form-container{ */
-    /* width: 100%; */
-    /* max-width: 100%; */
-    /* height: 100vh; */
-    /* background-color: var; */
-    /* position: fixed; */
-    /* top: 0; */
-    /* left: 0; */
-    /* z-index: 9999; */
-    /* display: flex; */
-    /* opacity: 0; */
-    /* transform: scale(0); */
-    /* transition: opacity .5s; */
-/* } */
-/*  */
-/* .form-container-inner{ */
-    /* margin: auto; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: var(--gap); */
-    /* text-align: center; */
-/* } */
-/*  */
-/* .form{ */
-    /* display: flex; */
-    /* justify-content: center; */
-/* } */
-/* .form-input,.form-btn{ */
-    /* display:inline-block; */
-    /* border: 2px solid; */
-    /* padding: 1.5rem; */
-/* } */
-/* .form-input{ */
-    /* border-right: none; */
-    /* width: 100%; */
-/* } */
-/* .form-btn{ */
-    /* margin-left: -.5rem; */
-    /* border-left: none; */
-    /* background-color: ; */
-    /* width: 8rem; */
-/* } */
-/* .form-note{ */
-    /* font-size: var(--font-size-xsm); */
-    /* align-self: flex-end; */
-/* } */
-/* .form-close-btn{ */
-    /* position: absolute; */
-    /* top: 1.5rem; */
-    /* right: 1.5rem; */
-    /* border: 2px solid; */
-    /* width: 4rem; */
-/* } */
+
+.visible-modal .modal {
+    display: block;
+}
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -190,7 +119,7 @@ i{
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
+    width: 100%; /* Half width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
@@ -203,36 +132,87 @@ i{
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 25%; /* Could be more or less, depending on screen size */
   }
   
   /* The Close Button */
   .close {
-    color: #aaa;
-    float: right;
+    color:var(--light-color-alt);
+    float:right;
     font-size: 28px;
     font-weight: bold;
   }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-/* Form JavaScript styles */
-.search-form-container.activated{
-    opacity: 1;
-    transform: scale(1);
-}
-
+    .close:hover,
+    .close:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+    }
+    /* The Delete Button */
+    .delete {
+        display: flex;
+        justify-content: right;
+        align-items: baseline;
+    }
 .gameItem{
     border: 1px solid #ccc;
     padding: 10px;
     display: flex;
+    gap: 20px;
     align-items: center;
 }
 .gameItem img{
     width: 100px;
     margin-right: 10px;
 }
+#add-game-button {
+    color: var(--primary-background-color);
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: var(--light-color);
+}
+
+#add-game-button.close:hover {
+    background-color: var(--secondary-background-color) ;
+}
+#add-game-button {border-radius: 8px;}
+
+#to-library-button { 
+    background-color: var(--light-color-alt);
+    border: none;
+    color: var(--light-color);
+    padding: 8px 16px;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    margin: 4px 2px;
+    transition: 0.3s;
+
+}
+
+#to-library-button:hover {
+    background-color: var(--secondary-background-color);
+    color: var(--hover-dark-color);
+}   
+#to-library-button {border-radius: 8px;}
+#search-button {
+    background-color: var(--light-color-alt);
+    border: none;
+    color: var(--light-color);
+    padding: 8px 16px;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    margin: 4px 2px;
+    transition: 0.3s;
+}
+
+#search-button:hover {
+    background-color: var(--secondary-background-color);
+    color: var(--hover-dark-color);
+}
+
+#search-button{border-radius: 8px;}

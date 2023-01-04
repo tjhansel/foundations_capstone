@@ -1,5 +1,5 @@
 window.onload = function () {
-  var modal = document.getElementById("myModal");
+  var modal = document.getElementById("searchModal");
   var btn = document.getElementById("add-game-button");
   console.log(btn);
   var span = document.getElementsByClassName("close")[0];
@@ -21,15 +21,15 @@ window.onload = function () {
   showCurrentLibrary();
 };
 
-// btn.addEventListener('click', onclick)
-const createMovie = (body) =>
-  axios.post(baseURL, body).then(moviesCallback).catch(errCallback);
+const deleteGame = () => {
+  axios.delete();
+};
 
 const doSearch = () => {
   console.log("Searching");
   const searchText = document.getElementById("gameSearch").value;
   console.log("searchText = ", searchText);
-  fetch("http://localhost:4000/api/search?search=" + searchText)
+  fetch("/api/search?search=" + searchText)
     .then((d) => d.json())
     .then((json) => {
       console.log(json);
@@ -40,22 +40,44 @@ const doSearch = () => {
         htmlToAdd +=
           "<div class='gameItem'>" +
           "<img src='" +
-          game.imgURL +
+          game.thumbnail +
           "' />" +
           "<h3>" +
-          game.title +
+          game.name +
           "</h3>" +
-          "<button onclick='addToLibrary()'>Add to Library</button>";
+          `<button id="to-library-button" onclick='addToLibrary(` +
+          JSON.stringify(game) +
+          `)'>Add</button>`;
         ("</div>");
       }
       resultsDiv.innerHTML = htmlToAdd;
     });
 };
-
-const addToLibrary = () => {
-  console.log("Working");
-  //to do: make post call
-  showCurrentLibrary();
+const getHTMLForGameBox = (game) => {
+  return (
+    `<div class="boardgameCard" onclick='showGameStats(` +
+    JSON.stringify(game) +
+    `)'>
+<div class="column">  
+  <div class="card"> 
+    <img class="boxArt" src="${game.thumbnail}" alt="the cover of the boardgame box">
+    <div class="gameName">
+    <h4>${game.name}</h4>
+    </div>
+</div>
+</div>`
+  );
+};
+const addToLibrary = (game) => {
+  console.log("Btn Working");
+  console.log(game);
+  axios.post("/api/games", game).then(({ data }) => {
+    gameLibrary.innerHTML = "";
+    for (game of data) {
+      const addGameBox = getHTMLForGameBox(game);
+      gameLibrary.innerHTML += addGameBox;
+    }
+  });
 };
 const showCurrentLibrary = () => {
   // find game library div
@@ -66,20 +88,30 @@ const showCurrentLibrary = () => {
     .then((games) => {
       console.log(games);
       for (game of games) {
-        const addGameBox = `<div class="class boardgameCard">
-      <div class="column">
-        <div class="card">
-          <img class="boxArt" src="${game.imgURL}" alt="the cover of the boardgame box">
-          <div class="gameName">
-          <h4>${game.title}</h4>
-          </div>
-      </div>
-    </div>`;
+        const addGameBox = getHTMLForGameBox(game);
         gameLibrary.innerHTML += addGameBox;
       }
     });
+};
+const showGameStats = (myLibrary) => {
+  console.log("clicky", myLibrary);
 
-  // display each item as HTML
+  const divToAdd = document.createElement("div");
+  const modalDiv = document.getElementById("gameStatsModal");
+  divToAdd.innerHTML = `<div id="searchModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideGameStatsModal()">&times;</span>
 
-  // Be happy
+      <h4>${myLibrary.name} Game Stats</h4><br>
+      <p>Min Players: ${myLibrary.minPlayers}</p>
+      <p>Max Players: ${myLibrary.maxPlayers}</p>
+      <p>Playing Time: ${myLibrary.playingTime} mins</p>
+      </div>
+    </div>`;
+  divToAdd.className = "visible-modal";
+  modalDiv.appendChild(divToAdd);
+};
+const hideGameStatsModal = () => {
+  const modalDiv = document.getElementById("gameStatsModal");
+  modalDiv.innerHTML = "";
 };
