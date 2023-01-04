@@ -43,12 +43,13 @@ app.get("/api/library", (req, res) => {
   res.json(myLibrary);
 });
 
-// app.delete("/api/library", (req, res) => {
-//   let deleteGame = myLibrary.name((item) => item.name === +req.params.name);
-//   myLibrary.splice(toDelete, 1);
-//   res.json(myLibrary);
-// });
+app.delete("/api/library", (req, res) => {
+  let deleteGame = myLibrary.name((item) => item.name === +req.params.name);
+  myLibrary.splice(toDelete, 1);
+  res.json(myLibrary);
+  console.log("deletey")
+});
 
-// <button id="delete" onclick="if(confirm('Are you sure?')) deleteGame(${myLibrary.name});"><i class="ri-delete-bin-line"></i></button>
+/* <button id="delete" onclick="if(confirm('Are you sure?')) deleteGame(${myLibrary.name});"><i class="ri-delete-bin-line"></i></button> */
 
 app.listen(4000, console.log("Server Running on 4000"));

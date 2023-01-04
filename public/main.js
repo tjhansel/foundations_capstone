@@ -21,9 +21,8 @@ window.onload = function () {
   showCurrentLibrary();
 };
 
-const deleteGame = () => {
-  axios.delete();
-};
+const deleteGame = name =>
+  axios.delete(`/api/library, ${name}`);
 
 const doSearch = () => {
   console.log("Searching");
@@ -64,6 +63,7 @@ const getHTMLForGameBox = (game) => {
     <div class="gameName">
     <h4>${game.name}</h4>
     </div>
+    <button id="delete" onclick="if(confirm('Are you sure you want to delete the game?')) deleteGame(${game.name});"><i class="ri-delete-bin-line"></i></button>
 </div>
 </div>`
   );
