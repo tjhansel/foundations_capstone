@@ -21,8 +21,8 @@ window.onload = function () {
   showCurrentLibrary();
 };
 
-const deleteGame = name =>
-  axios.delete(`/api/library, ${name}`);
+const deleteGame = (name) =>
+  axios.delete(`/api/library/${name}`).then(showCurrentLibrary());
 
 const doSearch = () => {
   console.log("Searching");
@@ -54,16 +54,16 @@ const doSearch = () => {
 };
 const getHTMLForGameBox = (game) => {
   return (
-    `<div class="boardgameCard" onclick='showGameStats(` +
-    JSON.stringify(game) +
-    `)'>
+    `<div class="boardgameCard">
 <div class="column">  
   <div class="card"> 
-    <img class="boxArt" src="${game.thumbnail}" alt="the cover of the boardgame box">
+    <img class="boxArt" src="${game.thumbnail}" alt="the cover of the boardgame box" onclick='showGameStats(` +
+    JSON.stringify(game) +
+    `)'>
     <div class="gameName">
     <h4>${game.name}</h4>
     </div>
-    <button id="delete" onclick="if(confirm('Are you sure you want to delete the game?')) deleteGame(${game.name});"><i class="ri-delete-bin-line"></i></button>
+    <button id="delete" onclick="if(confirm('Are you sure you want to delete the game?')) deleteGame('${game.name}');"><i class="ri-delete-bin-line"></i></button>
 </div>
 </div>`
   );
@@ -87,6 +87,7 @@ const showCurrentLibrary = () => {
     .then((d) => d.json())
     .then((games) => {
       console.log(games);
+      gameLibrary.innerHTML =''
       for (game of games) {
         const addGameBox = getHTMLForGameBox(game);
         gameLibrary.innerHTML += addGameBox;

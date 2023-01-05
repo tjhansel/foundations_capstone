@@ -43,9 +43,11 @@ app.get("/api/library", (req, res) => {
   res.json(myLibrary);
 });
 
-app.delete("/api/library", (req, res) => {
-  let deleteGame = myLibrary.name((item) => item.name === +req.params.name);
-  myLibrary.splice(toDelete, 1);
+app.delete("/api/library/:name", (req, res) => {
+  console.log('endpoint hit')
+  console.log(req.params.name)
+  let deleteGame = myLibrary.findIndex((item) => item.name === req.params.name);
+  myLibrary.splice(deleteGame, 1);
   res.json(myLibrary);
   console.log("deletey")
 });

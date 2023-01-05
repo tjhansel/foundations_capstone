@@ -150,6 +150,7 @@ i{
     }
     /* The Delete Button */
     .delete {
+        font-size: var(--font-size-sm);
         display: flex;
         justify-content: right;
         align-items: baseline;
