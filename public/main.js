@@ -61,7 +61,7 @@ const getHTMLForGameBox = (game) => {
     JSON.stringify(game) +
     `)'>
     <div class="gameName">
-    <h4>${game.name}</h4>
+    <h4>${game.name}</h4><br>
     </div>
     <button id="delete" onclick="if(confirm('Are you sure you want to delete the game?')) deleteGame('${game.name}');"><i class="ri-delete-bin-line"></i></button>
 </div>
