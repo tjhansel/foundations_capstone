@@ -149,11 +149,12 @@ i{
      cursor: pointer;
     }
     /* The Delete Button */
-    .delete {
+    #delete {
         font-size: var(--font-size-sm);
-        display: flex;
-        justify-content: right;
-        align-items: baseline;
+        display:inline-flex;
+        flex-direction: column;
+        background-color: var(--light-color);
+        
     }
 .gameItem{
     border: 1px solid #ccc;
